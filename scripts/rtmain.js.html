@@ -1,0 +1,38 @@
+/**
+* tu5 polling demo add on
+*/
+
+google.charts.load('upcoming', {'packages':['geochart','table']});
+google.charts.setOnLoadCallback(function () {
+
+  // initialize the app layout
+  App.initialize()
+  .then (function () {
+  
+    // initialize the control
+    var initPromise = Tu5Realtime.initialize();
+    
+    // get ready to report
+    Render.initialize();
+    
+    return initPromise;
+
+  })
+  .then (function () {
+  
+    // start the polling
+    Tu5Realtime.start ();
+    
+  });
+
+
+});
+
+
+
+
+
+
+
+
+
