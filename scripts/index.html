@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <base target="_top">
+    <?!= Include.html(['cdn.css']); ?> 
+    <?!= Include.css(['app']); ?> 
+  </head>
+  <body>
+   
+    <?!= Include.html(['appmarkup','cdn']); ?>  
+    <?!= Include.gs(['Process', 'Render','Utils' ,'App','ClientWatcher','DomUtils','Provoke']); ?>
+    <?!= Include.js(['main']); ?>
+
+  </body>
+</html>
+
+
