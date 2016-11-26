@@ -32,6 +32,7 @@ function ClientWatcher()  {
     }
   };
   
+
   // this holds current status
   var current_ =  {
     
