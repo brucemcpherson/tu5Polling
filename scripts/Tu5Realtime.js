@@ -4,7 +4,7 @@
 var Tu5Realtime = (function (ns) {
 
   var token_, nextPageToken_;
-  var INTERVAL = 1997;
+  var INTERVAL = 3997;
   
   ns.initialize = function () {
 
@@ -26,10 +26,12 @@ var Tu5Realtime = (function (ns) {
   ns.start = function () {
     Provoke.loiter (INTERVAL)
     .then (function () {
-      return ns.listChanges();
+      return ifvisible.now() ? ns.listChanges() : Promise.resolve (null);
     })
     .then (function (result) {
-      Render.changes (result.changes);
+      if (result) {
+        Render.changes (result.changes);
+      }
     })
     .then (function ()  {
       ns.start();
@@ -37,7 +39,7 @@ var Tu5Realtime = (function (ns) {
   }
   
   ns.getStartPageToken = function () {
-    return Cors.exec( "https://www.googleapis.com/drive/v3/changes/startPageToken",
+    return Cors.exec("https://www.googleapis.com/drive/v3/changes/startPageToken",
       "GET", null, {
         Authorization:"Bearer " + token_
       })
