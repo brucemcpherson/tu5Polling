@@ -1,5 +1,5 @@
 # Google Apps Script Project: tu5Polling
-This repo (tu5Polling) was automatically updated on 26 November 2016 09:08:06 GMT by GasGit
+This repo (tu5Polling) was automatically updated on 20 November 2017 12:46:15 GMT by GasGit
 
 For more information see the [desktop liberation site](http://ramblings.mcpher.com/Home/excelquirks/drivesdk/gettinggithubready "desktop liberation") or [contact me on G+](https://plus.google.com/+BruceMcpherson "Bruce McPherson - GDE")
 ## Details for Apps Script project tu5Polling
